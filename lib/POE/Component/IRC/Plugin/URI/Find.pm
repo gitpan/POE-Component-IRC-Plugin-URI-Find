@@ -6,7 +6,7 @@ use POE::Component::IRC::Plugin qw(:ALL);
 use URI::Find;
 use vars qw($VERSION);
 
-$VERSION = '1.00';
+$VERSION = '1.01';
 
 sub new {
   my $package = shift;
@@ -76,7 +76,7 @@ __END__
 
 =head1 NAME
 
-POE::Component::IRC::Plugin::POE::Knee - A POE::Component::IRC plugin that runs Acme::POE::Knee races.
+POE::Component::IRC::Plugin::URI::Find - A POE::Component::IRC plugin that finds URIs in channel traffic.
 
 =head1 SYNOPSIS
 

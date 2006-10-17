@@ -11,4 +11,4 @@ requires:
   POE: 0.37
   POE::Component::IRC: 5.07
   URI::Find: 0.16
-version: 1.00
+version: 1.01

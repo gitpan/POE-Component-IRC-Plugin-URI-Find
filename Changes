@@ -1,5 +1,9 @@
 POE::Component::IRC::Plugin::URI::Find
 ======================================
 
+1.01	Tue Oct 17 16:25:07 BST 2006
+	- Classic schoolboy typos in POD after doing a cut'n'paste job. Doh.
+	  Well spotted by Martijn Van Beers
+
 1.00	Tue Oct 17 12:05:56 BST 2006
 	- Initial Release
