@@ -6,7 +6,7 @@ use POE::Component::IRC::Plugin qw(:ALL);
 use URI::Find;
 use vars qw($VERSION);
 
-$VERSION = '1.01';
+$VERSION = '1.02';
 
 sub new {
   my $package = shift;

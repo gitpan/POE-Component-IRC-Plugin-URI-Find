@@ -1,6 +1,9 @@
 POE::Component::IRC::Plugin::URI::Find
 ======================================
 
+1.02    Sun Aug 05 11:11:11 BST 2007
+        - Fixed abstract_from and build_requires in Makefile.PL
+
 1.01	Tue Oct 17 16:25:07 BST 2006
 	- Classic schoolboy typos in POD after doing a cut'n'paste job. Doh.
 	  Well spotted by Martijn Van Beers

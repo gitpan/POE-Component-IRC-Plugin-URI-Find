@@ -1,14 +1,21 @@
+--- 
+abstract: A POE::Component::IRC plugin that finds URIs in channel traffic.
 author: Chris Williams
+build_requires: 
+  Test::More: 0.47
 distribution_type: module
-generated_by: Module::Install version 0.64
+generated_by: Module::Install version 0.67
 license: perl
+meta-spec: 
+  url: http://module-build.sourceforge.net/META-spec-v1.3.html
+  version: 1.3
 name: POE-Component-IRC-Plugin-URI-Find
-no_index:
-  directory:
+no_index: 
+  directory: 
     - inc
     - t
-requires:
+requires: 
   POE: 0.37
   POE::Component::IRC: 5.07
   URI::Find: 0.16
-version: 1.01
+version: 1.02
