@@ -6,6 +6,6 @@ abstract_from 'lib/POE/Component/IRC/Plugin/URI/Find.pm';
 license 'perl';
 build_requires 'Test::More' => 0.47;
 requires 'POE::Component::IRC' => 5.07;
-requires 'POE' => 0.37;
+requires 'POE' => 0.38;
 requires 'URI::Find' => 0.16;
 WriteAll;
