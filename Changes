@@ -1,6 +1,9 @@
 POE::Component::IRC::Plugin::URI::Find
 ======================================
 
+1.04	Fri Apr  4 13:58:57 BST 2008
+	- Kwalitee fixes.
+
 1.03	Thu Nov  1 12:20:22 GMT 2007
 	- Updated Module::Install to 0.68
 

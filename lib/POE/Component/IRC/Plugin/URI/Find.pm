@@ -1,12 +1,13 @@
 package POE::Component::IRC::Plugin::URI::Find;
 
 use strict;
+use warnings;
 use POE;
 use POE::Component::IRC::Plugin qw(:ALL);
 use URI::Find;
 use vars qw($VERSION);
 
-$VERSION = '1.03';
+$VERSION = '1.04';
 
 sub new {
   my $package = shift;
