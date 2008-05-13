@@ -1,6 +1,9 @@
 POE::Component::IRC::Plugin::URI::Find
 ======================================
 
+1.06	Tue May 13 10:59:07 BST 2008
+	- Added License information
+
 1.04	Fri Apr  4 13:58:57 BST 2008
 	- Kwalitee fixes.
 

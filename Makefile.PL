@@ -5,6 +5,7 @@ author 'Chris Williams';
 version_from 'lib/POE/Component/IRC/Plugin/URI/Find.pm';
 abstract_from 'lib/POE/Component/IRC/Plugin/URI/Find.pm';
 license 'perl';
+perl_version '5.000';
 build_requires 'Test::More' => 0.47;
 requires 'warnings::compat' => 0 if $] < 5.006;
 requires 'POE' => 0.38;
