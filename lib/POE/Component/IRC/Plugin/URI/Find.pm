@@ -7,7 +7,7 @@ use POE::Component::IRC::Plugin qw(:ALL);
 use URI::Find;
 use vars qw($VERSION);
 
-$VERSION = '1.06';
+$VERSION = '1.08';
 
 sub new {
   my $package = shift;
@@ -141,7 +141,7 @@ public channel traffic for URIs and generates irc events for each URI found.
 
 =over 
 
-=item new
+=item C<new>
 
 Creates a new plugin object.
 
@@ -153,7 +153,7 @@ The following irc event is generated whenever a URI is found in channel text:
 
 =over
 
-=item irc_urifind_uri
+=item C<irc_urifind_uri>
 
 With the following parameters:
 
@@ -171,7 +171,7 @@ Chris 'BinGOs' Williams
 
 =head1 LICENSE
 
-Copyright C<(c)> Chris Williams.
+Copyright E<copy> Chris Williams.
 
 This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself.
 

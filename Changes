@@ -1,6 +1,10 @@
 POE::Component::IRC::Plugin::URI::Find
 ======================================
 
+1.08	Fri Apr 17 23:22:30 BST 2009
+	- Import to git repo
+	- Bump to stable release
+
 1.06	Tue May 13 10:59:07 BST 2008
 	- Added License information
 
