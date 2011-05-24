@@ -1,25 +1,37 @@
-POE::Component::IRC::Plugin::URI::Find
-======================================
+==============================
+2011-05-24 12:41:58 +0100 1.10
+==============================
 
-1.08	Fri Apr 17 23:22:30 BST 2009
-	- Import to git repo
-	- Bump to stable release
+  commit 63d72b1c2d401c308d6ce15b766fa9e451d44a45
+  Author: Chris 'BinGOs' Williams <chris@bingosnet.co.uk>
+  Date:   Tue May 24 12:41:58 2011 +0100
+  
+    Fix pod coverage exclusions
 
-1.06	Tue May 13 10:59:07 BST 2008
-	- Added License information
+  commit 0e8ebe9e512a8ed09d4138bd01619cc96c7c4053
+  Author: Chris 'BinGOs' Williams <chris@bingosnet.co.uk>
+  Date:   Tue May 24 12:01:41 2011 +0100
+  
+    Bye bye README
 
-1.04	Fri Apr  4 13:58:57 BST 2008
-	- Kwalitee fixes.
+  commit b26770f1fcefbccf978753fd48a4078fc760f2c7
+  Author: Chris 'BinGOs' Williams <chris@bingosnet.co.uk>
+  Date:   Tue May 24 12:00:50 2011 +0100
+  
+    Change dist to Dist::Zilla
 
-1.03	Thu Nov  1 12:20:22 GMT 2007
-	- Updated Module::Install to 0.68
+  commit 956562a9be4b58353b91bcb0795ec99763d217eb
+  Author: Hinrik Örn Sigurðsson <hinrik.sig@gmail.com>
+  Date:   Sun May 22 11:58:20 2011 +0800
+  
+    Also catch URIs in CTCP ACTION messages
 
-1.02    Sun Aug 05 11:11:11 BST 2007
-        - Fixed abstract_from and build_requires in Makefile.PL
+  commit 55f21a2746202d154b77b4b45533a3c7a5982824
+  Author: Chris Williams <chris@bingosnet.co.uk>
+  Date:   Fri Apr 17 23:33:45 2009 +0100
+  
+    Fix the README file 
 
-1.01	Tue Oct 17 16:25:07 BST 2006
-	- Classic schoolboy typos in POD after doing a cut'n'paste job. Doh.
-	  Well spotted by Martijn Van Beers
-
-1.00	Tue Oct 17 12:05:56 BST 2006
-	- Initial Release
+====================================
+End of changes in the last 1825 days
+====================================

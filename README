@@ -1,6 +1,9 @@
 NAME
     POE::Component::IRC::Plugin::URI::Find - A POE::Component::IRC plugin
-    that finds URIs in channel traffic.
+    that finds URIs in channel traffic
+
+VERSION
+    version 1.10
 
 SYNOPSIS
       use strict;
@@ -76,17 +79,17 @@ OUTPUT
           ARG3, the URI::URL object;
           ARG4, what was originally said;
 
-AUTHOR
-    Chris 'BinGOs' Williams
-
-LICENSE
-    Copyright © Chris Williams.
-
-    This program is free software; you can redistribute it and/or modify it
-    under the same terms as Perl itself.
-
 SEE ALSO
     POE::Component::IRC
 
     URI::Find
+
+AUTHOR
+    Chris Williams
+
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2011 by Chris Williams.
+
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
 

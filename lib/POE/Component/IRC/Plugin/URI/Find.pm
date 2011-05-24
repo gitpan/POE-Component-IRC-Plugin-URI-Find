@@ -1,13 +1,15 @@
 package POE::Component::IRC::Plugin::URI::Find;
+BEGIN {
+  $POE::Component::IRC::Plugin::URI::Find::VERSION = '1.10';
+}
+
+#ABSTRACT: A POE::Component::IRC plugin that finds URIs in channel traffic
 
 use strict;
 use warnings;
 use POE;
 use POE::Component::IRC::Plugin qw(:ALL);
 use URI::Find;
-use vars qw($VERSION);
-
-$VERSION = '1.08';
 
 sub new {
   my $package = shift;
@@ -18,7 +20,7 @@ sub new {
 
 sub PCI_register {
   my ($self,$irc) = @_;
-  $irc->plugin_register( $self, 'SERVER', qw(public) );
+  $irc->plugin_register( $self, 'SERVER', qw(public ctcp_action) );
   $self->{session_id} = POE::Session->create(
 	object_states => [ 
 	   $self => [ qw(_shutdown _start _uri_find _uri_found) ],
@@ -39,6 +41,17 @@ sub S_public {
   my $who = ${ $_[0] };
   my $channel = ${ $_[1] }->[0];
   my $what = ${ $_[2] };
+  $poe_kernel->call( $self->{session_id}, '_uri_find', $irc, $who, $channel, $what );
+  return PCI_EAT_NONE;
+}
+
+sub S_ctcp_action {
+  my ($self,$irc) = splice @_, 0, 2;
+  my $who = ${ $_[0] };
+  my $channel = ${ $_[1] }->[0];
+  my $what = ${ $_[2] };
+  my $chantypes = join('', @{ $irc->isupport('CHANTYPES') || ['#', '&']});
+  return PCI_EAT_NONE if $channel !~ /^[$chantypes]/;
   $poe_kernel->call( $self->{session_id}, '_uri_find', $irc, $who, $channel, $what );
   return PCI_EAT_NONE;
 }
@@ -72,12 +85,19 @@ sub _uri_found {
   undef;
 }
 
-1;
+q[Find this URL http://cpanidx.org/];
+
+
 __END__
+=pod
 
 =head1 NAME
 
-POE::Component::IRC::Plugin::URI::Find - A POE::Component::IRC plugin that finds URIs in channel traffic.
+POE::Component::IRC::Plugin::URI::Find - A POE::Component::IRC plugin that finds URIs in channel traffic
+
+=head1 VERSION
+
+version 1.10
 
 =head1 SYNOPSIS
 
@@ -137,9 +157,14 @@ POE::Component::IRC::Plugin::URI::Find - A POE::Component::IRC plugin that finds
 POE::Component::IRC::Plugin::URI::Find, is a L<POE::Component::IRC> plugin that parses
 public channel traffic for URIs and generates irc events for each URI found.
 
+=for Pod::Coverage  PCI_register
+ PCI_unregister
+ S_public
+ S_ctcp_action
+
 =head1 CONSTRUCTOR
 
-=over 
+=over
 
 =item C<new>
 
@@ -165,19 +190,22 @@ With the following parameters:
 
 =back
 
-=head1 AUTHOR
-
-Chris 'BinGOs' Williams
-
-=head1 LICENSE
-
-Copyright E<copy> Chris Williams.
-
-This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself.
-
 =head1 SEE ALSO
 
 L<POE::Component::IRC>
 
 L<URI::Find>
+
+=head1 AUTHOR
+
+Chris Williams
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2011 by Chris Williams.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+=cut
 
